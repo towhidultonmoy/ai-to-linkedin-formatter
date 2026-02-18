@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Formatter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1>AI to LinkedIn Formatter</h1>
+            <p>Paste your ChatGPT/Claude drafts here. We make them LinkedIn-ready.</p>
+        </header>
+
+        <div class="converter-box">
+            <div class="input-group">
+                <label for="input-text">Input (Markdown)</label>
+                <textarea id="input-text" placeholder="Type here... Use **bold** or *italic*"></textarea>
+            </div>
+
+            <div class="arrow-divider">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+            </div>
+
+            <div class="input-group">
+                <label for="output-text">Preview (LinkedIn Ready)</label>
+                <textarea id="output-text" readonly placeholder="Formatted text will appear here..."></textarea>
+                <button id="copy-btn" class="btn-primary">
+                    <span class="btn-text">Copy to Clipboard</span>
+                    <span class="btn-icon">📋</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="cheatsheet">
+            <h3>Cheat Sheet</h3>
+            <ul>
+                <li><code>**text**</code> &rarr; <b>𝐁𝐨𝐥𝐝 (Serif)</b></li>
+                <li><code>*text*</code> &rarr; <i>𝐼𝑡𝑎𝑙𝑖𝑐 (Serif)</i></li>
+                <li><code>__text__</code> &rarr; <b>𝗕𝗼𝗹𝗱 (Sans)</b></li>
+                <li><code>_text_</code> &rarr; <i>𝘐𝘵𝘢𝘭𝘪𝘤 (Sans)</i></li>
+                <li><code>`text`</code> &rarr; <code>𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎</code></li>
+                <li><code>~text~</code> &rarr; 𝒮𝒸𝓇𝒾𝓅𝓉</li>
+                <li><code># Text</code> &rarr; <b>𝐇𝐄𝐀𝐃𝐈𝐍𝐆</b></li>
+                <li><code>## Text</code> &rarr; <b>𝗕𝗼𝗹𝗱 𝗦𝗮𝗻𝘀</b></li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
